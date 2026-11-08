@@ -7,6 +7,10 @@ public class Client {
     }
 
     public void showTheCar() {
+        if (carConstructor.getElementsOfCar().isEmpty()) {
+            System.out.println("У машины заводской комплект.");
+            return;
+        }
         for (String typeOfEl : carConstructor.getElementsOfCar().keySet()) {
             System.out.println(typeOfEl + " : " + carConstructor
                     .getElementsOfCar().get(typeOfEl));
